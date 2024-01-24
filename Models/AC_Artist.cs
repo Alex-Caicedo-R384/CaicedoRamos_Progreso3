@@ -5,7 +5,7 @@ using System.Text;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
-namespace CaicedoRamos_Progreso3.Controladores
+namespace CaicedoRamos_Progreso3.Models
 {
     public class AC_Artist
     {

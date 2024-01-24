@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CaicedoRamos_Progreso3.Views.ResultsPage"
              Title="ResultsPage"
              BackgroundColor="#5e5e5e">
-    <ListView x:Name="ListaArtistas">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
+    <ScrollView>
+        <CollectionView ItemsSource="{Binding ArtistData.message.body.artist_list}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
                     <StackLayout>
-                        <Label Text="{Binding NombreArtista}" FontAttributes="Bold" FontSize="Large" />
-                        <Label Text="{Binding ID}" />
-                        <Label Text="{Binding Pais}" />
-                        <Label Text="{Binding FechadeActualización}" />
-                        <Label Text="{Binding FechaNacimiento}" />
-                        <Label Text="{Binding FechaFallecimiento}" />
-                        <BoxView HeightRequest="1" Color="#61071d" />
+                        <Label Text="{Binding artist.artist_name}" FontAttributes="Bold" FontSize="Large" />
+                        <Label Text="{Binding artist.artist_id}" />
+                        <Label Text="{Binding artist.artist_country}" />
+                        <Label Text="{Binding artist.artist_rating}" />
+                        <Label Text="{Binding artist.updated_time}" />
+                        <Label Text="{Binding artist.begin_date_year}" />
+                        <Label Text="{Binding artist.end_date_year}" />
                     </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
 </ContentPage>

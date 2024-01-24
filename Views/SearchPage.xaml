@@ -10,7 +10,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <Entry x:Name="ArtistNameEntry"
+        <Entry Text="{Binding ArtistName}"
                Placeholder="Nombre del Artista"
                VerticalOptions="CenterAndExpand" 
                HorizontalOptions="FillAndExpand" />
