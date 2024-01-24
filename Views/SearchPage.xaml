@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaicedoRamos_Progreso3.Views.SearchPage"
+             Title="SearchPage"
+             BackgroundColor="#5e5e5e">
+    <StackLayout>
+        <Label 
+            Text="Buscar Artista"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="ArtistNameEntry"
+               Placeholder="Nombre del Artista"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="FillAndExpand" />
+
+        <Button 
+            Text="Realizar Búsqueda"
+            Clicked="OnSearchClicked"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>
